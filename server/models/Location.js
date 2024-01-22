@@ -52,8 +52,14 @@ const locationSchema = new mongoose.Schema({
                 required: true,
             },
             slots: [{
-                start_time: datetime,
-                end_time: datetime,
+                start_time: {
+                    type: Date,
+                    required: true,
+                },
+                end_time: {
+                    type: Date,
+                    required: true,
+                },
                 is_booked: {
                     type: Boolean,
                     default: false,

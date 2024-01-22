@@ -1,11 +1,12 @@
 const express = require('express');
-const Location = require('../models/Location');
 const router =  express.Router();
+const Location = require('../models/Location');
 
 // GET route to get all locations
 router.get('/locations', async (req, res) => {
     try {
         const location = await Location.find();
+        console.log('GET request received for /locations');
         res.json(location);
     }
     catch (err) {
