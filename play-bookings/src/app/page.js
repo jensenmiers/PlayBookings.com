@@ -29,7 +29,7 @@ export default function Home() {
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-4 bg-gray-200 rounded">
               <h4 className="font-bold">Easy booking</h4>
-              <p>Seamless booking experience for gym rentals.</p>
+              <p>Seamless booking experience for gym & facilityrentals.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded">
               <h4 className="font-bold">Affordable rates</h4>
