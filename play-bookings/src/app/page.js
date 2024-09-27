@@ -18,8 +18,8 @@ export default function Home() {
         {/* Hero Section */}
         <section className="flex flex-col items-center justify-center h-screen bg-blue-600 text-white">
           <h2 className="text-4xl font-bold">Welcome to Play Bookings</h2>
-          <p className="mt-4 text-lg">Rent public basketball gyms easily.</p>
-          <p className="mt-4 text-lg">Discover and book indoor courts at your convenience.</p>
+          <p className="mt-4 text-lg">Rent indoor gyms & outdoor fields or list your facilitites easily.</p>
+          <p className="mt-4 text-lg">Available courts & fields at your convenience.</p>
           <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Sign up for updates and early access</button>
         </section>
 
@@ -29,15 +29,15 @@ export default function Home() {
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-4 bg-gray-200 rounded">
               <h4 className="font-bold">Easy booking</h4>
-              <p>Seamless booking experience for gym & facilityrentals.</p>
+              <p>Seamless booking experience for gym & facility rentals.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded">
-              <h4 className="font-bold">Affordable rates</h4>
-              <p>Competitive pricing for private resevations.</p>
+              <h4 className="font-bold">Rent unutilized spaces.</h4>
+              <p>Competitive pricing to reserve or list your facilities.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded">
-              <h4 className="font-bold">Secure payments</h4>
-              <p>Safe and reliable payments using Stripe.</p>
+              <h4 className="font-bold">Verified locations and secure payments</h4>
+              <p>Safe and reliable onboarding, ensuring trust across our marketplace.</p>
             </div>
           </div>
         </section>
