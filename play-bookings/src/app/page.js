@@ -18,24 +18,24 @@ export default function Home() {
         {/* Hero Section */}
         <section className="flex flex-col items-center justify-center h-screen bg-blue-600 text-white">
           <h2 className="text-4xl font-bold">Welcome to Play Bookings</h2>
-          <p className="mt-4 text-lg">Rent available indoor gyms & outdoor fields at your convenience.</p>
-          <p className="mt-4 text-lg">Facility owners, list your locations easily</p>
+          <p className="mt-4 text-lg">Find available indoor gyms & outdoor fields at your convenience.</p>
+          <p className="mt-4 text-lg">Are you a facility owner? List your locations easily.</p>
           <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Sign up for updates and early access</button>
         </section>
 
         {/* Features Section */}
         <section id="features" className="p-8">
-          <h3 className="text-2xl font-bold text-center">Features</h3>
+          <h3 className="text-2xl font-bold text-center features-text">Features</h3>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-4 bg-gray-200 rounded">
+            <div className="p-4 bg-gray-200 rounded features-text">
               <h4 className="font-bold">Easy bookings.</h4>
               <p>Seamless booking experience for gym & field rentals.</p>
             </div>
-            <div className="p-4 bg-gray-200 rounded">
+            <div className="p-4 bg-gray-200 rounded features-text">
               <h4 className="font-bold">Fill un-used spaces.</h4>
-              <p>A competitive marketplace for both renters and facility owners.</p>
+              <p>A balanced marketplace for both renters and facility owners.</p>
             </div>
-            <div className="p-4 bg-gray-200 rounded">
+            <div className="p-4 bg-gray-200 rounded features-text">
               <h4 className="font-bold">Verified locations.</h4>
               <p>Safe and reliable onboarding of venues, ensuring trust across our marketplace.</p>
             </div>
