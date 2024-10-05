@@ -32,7 +32,7 @@ export default function Home() {
               <p>Seamless booking experience for gym & field rentals.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded features-text">
-              <h4 className="font-bold">Fill un-used spaces.</h4>
+              <h4 className="font-bold">Fill unused spaces.</h4>
               <p>A balanced marketplace for both renters and facility owners.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded features-text">
