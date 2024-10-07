@@ -37,7 +37,7 @@ export default function Home() {
             </div>
             <div className="p-4 bg-gray-200 rounded features-text">
               <h4 className="font-bold">Verified locations.</h4>
-              <p>Safe and reliable onboarding of venues, ensuring trust across our marketplace.</p>
+              <p>Reliable onboarding, ensuring quality venues across our marketplace.</p>
             </div>
           </div>
         </section>
