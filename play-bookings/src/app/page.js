@@ -17,10 +17,10 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="flex flex-col items-center justify-center h-screen bg-blue-600 text-white">
-          <h2 className="text-4xl font-bold">Welcome to Play Bookings</h2>
-          <p className="mt-4 text-lg">Find available indoor gyms & outdoor fields at your convenience.</p>
-          <p className="mt-4 text-lg">Are you a facility owner? List your locations easily.</p>
-          <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Sign up for updates and early access</button>
+          <h2 className="text-4xl font-bold">Discover & Book Sports Facilities with Ease</h2>
+          <p className="mt-4 text-lg">Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.</p>
+          <p className="mt-4 text-lg">Own a Gym or Field? Earn by Listing Your Space in Minutes.</p>
+          <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Get Early Access – Join Our List for Exclusive Updates!</button>
         </section>
 
         {/* Features Section */}
@@ -28,16 +28,16 @@ export default function Home() {
           <h3 className="text-2xl font-bold text-center features-text">Features</h3>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-4 bg-gray-200 rounded features-text">
-              <h4 className="font-bold">Easy bookings.</h4>
-              <p>Seamless booking experience for gym & field rentals.</p>
+              <h4 className="font-bold">Effortless Booking.</h4>
+              <p>Reserve Sports Spaces in Just a Few Clicks.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded features-text">
-              <h4 className="font-bold">Fill unused spaces.</h4>
-              <p>A balanced marketplace for both renters and facility owners.</p>
+              <h4 className="font-bold">Maximize Revenue.</h4>
+              <p>Rent Out Unused Sports Spaces Easily.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded features-text">
-              <h4 className="font-bold">Verified locations.</h4>
-              <p>Reliable onboarding, ensuring quality venues across our marketplace.</p>
+              <h4 className="font-bold">Trusted & Verified.</h4>
+              <p>Only High-Quality, Reliable Venues.</p>
             </div>
           </div>
         </section>
