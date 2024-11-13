@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-[80vh] flex-col items-center justify-between p-24">
       <div>
         {/* Header */}
         <header className="flex justify-between p-4 bg-gray-800 text-white">
