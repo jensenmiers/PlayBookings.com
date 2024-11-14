@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <main className="flex min-h-[80vh] flex-col items-center justify-between p-24">
+    <main className="flex flex-col items-center justify-between p-24">
       <div>
         {/* Header */}
         <header className="flex justify-between p-4 bg-gray-800 text-white">
@@ -16,7 +16,7 @@ export default function Home() {
         </header>
 
         {/* Hero Section */}
-        <section className="flex flex-col items-center justify-center h-screen bg-blue-600 text-white">
+        <section className="flex flex-col items-center justify-center h-[50vh] bg-blue-600 text-white">
           <h2 className="text-4xl font-bold">Discover & Book Sports Facilities with Ease</h2>
           <p className="mt-4 text-lg">Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.</p>
           <p className="mt-4 text-lg">Own a Gym or Field? Earn by Listing Your Space in Minutes.</p>
