@@ -42,7 +42,7 @@ export default function Home() {
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
             <div className="p-4 bg-gray-200 rounded features-text">
               <h4 className="font-bold text-lg">Effortless Booking.</h4>
-              <p>Reserve Sports Spaces in Just a Few Clicks.</p>
+              <p>Reserve Spaces in Just a Few Clicks.</p>
             </div>
             <div className="p-4 bg-gray-200 rounded features-text">
               <h4 className="font-bold text-lg">Maximize Revenue.</h4>
