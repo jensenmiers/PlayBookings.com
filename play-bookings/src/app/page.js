@@ -20,7 +20,7 @@ export default function Home() {
         <section className="flex flex-col items-center justify-center min-h-[50vh] bg-blue-600 text-white px-4 sm:px-6 lg:px-8">
           {/* <h2 className="text-4xl font-bold">Discover & Book Sports Facilities with Ease</h2> */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
-            Discover & Book Sports Facilities with Ease
+            Discover & Book Sports Facilities with Ease.
           </h2>
           {/* <p className="mt-4 text-lg">Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.</p> */}
           <p className="mt-4 text-base sm:text-lg text-center">
