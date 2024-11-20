@@ -32,7 +32,7 @@ export default function Home() {
   </p>
           {/* <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Get Early Access – Join Our List for Exclusive Updates!</button> */}
           <button className="mt-6 px-4 sm:px-6 py-2 bg-yellow-500 text-black font-semibold rounded text-sm sm:text-base w-full sm:w-auto max-w-xs">
-            Get Early Access – Enter Your Email for Exclusive Updates!
+            Get Early Access – Enter Your Email for Updates!
           </button>
         </section>
 
