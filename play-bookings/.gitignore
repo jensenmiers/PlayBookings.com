@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# mailchimp
+MAILCHIMP_API_KEY=2483391d4b0aa02c5ca832b8f564252a-us8
+MAILCHIMP_LIST_ID=1cca5d52e0
