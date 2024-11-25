@@ -24,12 +24,12 @@ export default function Home() {
           </h2>
           {/* <p className="mt-4 text-lg">Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.</p> */}
           <p className="mt-4 text-base sm:text-lg text-center">
-    Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.
-  </p>
+            Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.
+          </p>
           {/* <p className="mt-4 text-lg">Own a Gym or Field? Earn by Listing Your Space in Minutes.</p> */}
           <p className="mt-4 text-base sm:text-lg text-center">
-    Own a Gym or Field? Earn by Listing Your Space in Minutes.
-  </p>
+            Own a Gym, Field, or Sports Facility? Earn by Listing Your Space in Minutes.
+          </p>
           {/* <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Get Early Access – Join Our List for Exclusive Updates!</button> */}
           <div className="mt-6 flex flex-col sm:flex-row gap-2 w-full max-w-xs">
             <input
