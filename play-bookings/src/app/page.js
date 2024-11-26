@@ -1,7 +1,42 @@
+"use client";
+
 import Image from "next/image";
 import Head from "next/head";
+import React, {useState} from "react";
 
 export default function Home() {
+
+  // state to hold the email input variable
+  const [email, setEmail] = useState("");
+
+  // event handler for input change
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  }
+
+  const handleGetDemoClick = async (event) => {
+    // ADD THE LOGIC TO SUBMIT THE EMAIL TO MAILCHIMP
+    event.preventDefault();
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      if (response.ok) {
+        console.log("Email submitted successfully:", email )
+        setEmail("");
+      } else {
+        console.error("Failed to submit email");
+      }
+    } catch (error) {
+      console.error("Error submitting email:", error);
+    }
+
+  };
+
   return (
     <main className="flex flex-col items-center justify-between p-24">
       <div>
@@ -35,9 +70,14 @@ export default function Home() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-4 py-2 border border-gray-300 rounded text-sm sm:text-base w-full"
+              className="px-4 py-2 border border-gray-300 rounded text-sm sm:text-base w-full text-black"
+              value={email} // binding the input value to the state
+              onChange={handleEmailChange} // add the event listener for text
             />
-            <button className="px-4 sm:px-6 py-2 bg-yellow-500 text-black font-semibold rounded text-sm sm:text-base">
+            <button
+              className="px-4 sm:px-6 py-2 bg-yellow-500 text-black font-semibold rounded text-sm sm:text-base whitespace-nowrap"
+              onClick={handleGetDemoClick} // add the event handler for submitting the buttton
+            >
               Get Demo
             </button>
           </div>
