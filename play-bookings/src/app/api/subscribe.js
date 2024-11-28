@@ -6,6 +6,7 @@ export async function POST(request) {
 
         // MAILCHIMP API URL & API KEY!!
         // const mailchimpUrl = `https://<dc>.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`;
+        // need to use SUPABASE!!
         const apiKey = process.env.MAILCHIMP_API_KEY;
 
         const response = await fetch(mailchimpUrl, {
