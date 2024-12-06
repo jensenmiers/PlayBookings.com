@@ -5,9 +5,13 @@ export async function POST(request) {
     try {
         const { email } = await request.json();
 
-        // MAILCHIMP API URL & API KEY!!
-        // const mailchimpUrl = `https://<dc>.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`;
         // need to use SUPABASE!!
+
+        // alright, i built out the client.js, middleware.js, and server.js 
+        // but now need to connect the database to my server 
+        // AND make a CREATE crud action on the backend and frontend
+
+
         const apiKey = process.env.MAILCHIMP_API_KEY;
 
         const response = await fetch(mailchimpUrl, {
