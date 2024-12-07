@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Head from "next/head";
+// import Image from "next/image";
+// import Head from "next/head";
 import React, {useState} from "react";
 
 export default function Home() {
@@ -17,24 +17,26 @@ export default function Home() {
   const handleGetDemoClick = async (event) => {
     // ADD THE LOGIC TO SUBMIT THE EMAIL TO MAILCHIMP
     event.preventDefault();
+
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email}),
       });
+
+      const result = await response.json();
+
       if (response.ok) {
-        console.log("Email submitted successfully:", email )
-        setEmail("");
+        alert('Email subscribed successfully!');
       } else {
-        console.error("Failed to submit email");
+        alert(`Error: ${result.error}`);
       }
     } catch (error) {
-      console.error("Error submitting email:", error);
+      alert('An unexpected error occured.');
     }
-
   };
 
   return (

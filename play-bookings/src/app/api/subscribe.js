@@ -1,34 +1,28 @@
-// import { createClient } from '@/utils/supabase/server'
+import { createClient } from '@/utils/supabase/server'
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
+    console.log('Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL); // Add this line
+    console.log('Received POST request');
+
     try {
         const { email } = await request.json();
+        console.log('Email received:', email)
 
-        // need to use SUPABASE!!
+        // Inititalize Supabase client
+        const supabase = createClient();
+        console.log('Supabase client initialized');
 
-        // alright, i built out the client.js, middleware.js, and server.js 
-        // but now need to connect the database to my server 
-        // AND make a CREATE crud action on the backend and frontend
+        // Insert the email into the Supabase database
+        const { data, error } = await supabase
+            .from('subscribers')
+            .insert([{ email }]);
 
-
-        const apiKey = process.env.MAILCHIMP_API_KEY;
-
-        const response = await fetch(mailchimpUrl, {
-            method: 'POST',
-            headers: {
-                'Authorization': `apikey ${apiKey}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email_address: email,
-                status: 'subscribed',
-            }),
-        });
-        if (!response.ok) {
-            throw new Error('Failed to subscribe email');
+        if (error) {
+            console.error('Supabase:', error);
+            throw new Error('Failed to insert email into the database');
         }
-        return NextResponse.json({message: 'Email subscribed successfully' });
+        return NextResponse.json({message: 'Email subscribed successfully', data });
     } catch (error) {
         return NextResponse.json({error: error.message}, {status: 500});
     }
