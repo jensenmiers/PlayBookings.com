@@ -22,8 +22,12 @@ export async function POST(request) {
             console.error('Supabase:', error);
             throw new Error('Failed to insert email into the database');
         }
-        return NextResponse.json({message: 'Email subscribed successfully', data });
+        return new Response(JSON.stringify({message: 'Email subscribed successfully', data }), {
+            status: 200,
+        });
     } catch (error) {
-        return NextResponse.json({error: error.message}, {status: 500});
+        return new Response(JSON.stringify({error: error.message}, {status: 500}), {
+            status: 500,
+        });
     }
 }
