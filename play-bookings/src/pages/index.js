@@ -1,8 +1,6 @@
-"use client";
-
-// import Image from "next/image";
-// import Head from "next/head";
 import React, {useState} from "react";
+import RootLayout from './layout'
+
 
 export default function Home() {
 
@@ -15,7 +13,6 @@ export default function Home() {
   }
 
   const handleGetDemoClick = async (event) => {
-    // ADD THE LOGIC TO SUBMIT THE EMAIL TO MAILCHIMP
     event.preventDefault();
 
     try {
@@ -24,7 +21,7 @@ export default function Home() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email}),
+        body: JSON.stringify({ email }),
       });
 
       const result = await response.json();
@@ -40,20 +37,22 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <div>
-        {/* Header */}
-        <header className="flex justify-between p-4 bg-gray-800 text-white">
-          <h1 className="text-lg font-bold">Play Bookings</h1>
-          <nav>
-            <a href="#features" className="mx-2">Features</a>
-            {/* <a href="#testimonials" className="mx-2">Testimonials</a> */}
-            <a href="#contact" className="mx-2">Contact</a>
-          </nav>
-        </header>
+    // <main className="flex flex-col items-center justify-between p-24">
+    //   <div>
+    //     {/* Header */}
+    //     <header className="flex justify-between p-4 bg-gray-800 text-white">
+    //       <h1 className="text-lg font-bold">Play Bookings</h1>
+    //       <nav>
+    //         <a href="#features" className="mx-2">Features</a>
+    //         {/* <a href="#testimonials" className="mx-2">Testimonials</a> */}
+    //         <a href="#contact" className="mx-2">Contact</a>
+    //       </nav>
+    //     </header>
 
-        {/* Hero Section */}
-        {/* <section className="flex flex-col items-center justify-center h-[50vh] bg-blue-600 text-white"> */}
+        /* Hero Section */
+        /* <section className="flex flex-col items-center justify-center h-[50vh] bg-blue-600 text-white"> */
+
+      <RootLayout>
         <section className="flex flex-col items-center justify-center min-h-[50vh] bg-blue-600 text-white px-4 sm:px-6 lg:px-8">
           {/* <h2 className="text-4xl font-bold">Discover & Book Sports Facilities with Ease</h2> */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
@@ -104,12 +103,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
+        </RootLayout>
+
+        /* Footer
         <footer className="p-4 bg-gray-800 text-white text-center">
           <p>&copy; 2024 Play Bookings LLC. All rights reserved.</p>
-        </footer>
+        </footer> */
 
-      </div>
-    </main>
+      /* </div>
+    </main> */
   );
 }

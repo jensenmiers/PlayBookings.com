@@ -1,8 +1,8 @@
 
-import { createServerClient } from "@supabase/ssr";
+import { createClient } from "@supabase/supabase-js";
 
-export const createClient = (request) => {
-  return createServerClient (
+export const createServerClientWithHeaders = (request) => {
+  return createClient (
     process.env.NEXT_PUBLIC_SUPABASE_URL,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
