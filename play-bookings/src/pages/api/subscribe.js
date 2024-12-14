@@ -18,7 +18,7 @@ export default async function handler(req, res) {
                 .from('subscribers')
                 .insert([
                     {
-                        userid: null,
+                        // userid: null,
                         created_at: new Date().toISOString(),
                         email: email
                     }
