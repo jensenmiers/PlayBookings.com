@@ -19,7 +19,7 @@ export default async function handler(req, res) {
                 .insert([
                     {
                         // userid: null,
-                        created_at: new Date().toISOString(),
+                        // created_at: new Date().toISOString(),
                         email: email
                     }
                 ])
