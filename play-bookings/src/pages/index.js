@@ -28,6 +28,7 @@ export default function Home() {
 
       if (response.ok) {
         alert('Email subscribed successfully!');
+        setEmail('');
       } else {
         alert(`Error: ${result.error}`);
       }
