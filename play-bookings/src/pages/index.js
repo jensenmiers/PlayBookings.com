@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import RootLayout from './layout'
+import { toast } from 'react-toastify';
 
 
 export default function Home() {
@@ -15,6 +16,11 @@ export default function Home() {
   const handleGetDemoClick = async (event) => {
     event.preventDefault();
 
+    if (!email) {
+      toast.error('Please enter a valid email address.');
+      return
+    }
+
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
@@ -27,32 +33,19 @@ export default function Home() {
       const result = await response.json();
 
       if (response.ok) {
-        alert('Email subscribed successfully!');
+        toast.success("Success! 🎉 Thank you for your interest. We'll be in touch soon!", {
+          className: "bg-green-50 border-green-200",
+        });
         setEmail('');
       } else {
-        alert(`Error: ${result.error}`);
+        toast.error(`Error: ${result.error}`);
       }
     } catch (error) {
-      alert('An unexpected error occured.');
+      toast.error('An unexpected error occured.');
     }
   };
 
   return (
-    // <main className="flex flex-col items-center justify-between p-24">
-    //   <div>
-    //     {/* Header */}
-    //     <header className="flex justify-between p-4 bg-gray-800 text-white">
-    //       <h1 className="text-lg font-bold">Play Bookings</h1>
-    //       <nav>
-    //         <a href="#features" className="mx-2">Features</a>
-    //         {/* <a href="#testimonials" className="mx-2">Testimonials</a> */}
-    //         <a href="#contact" className="mx-2">Contact</a>
-    //       </nav>
-    //     </header>
-
-        /* Hero Section */
-        /* <section className="flex flex-col items-center justify-center h-[50vh] bg-blue-600 text-white"> */
-
       <RootLayout>
         <section className="flex flex-col items-center justify-center min-h-[50vh] bg-blue-600 text-white px-4 sm:px-6 lg:px-8">
           {/* <h2 className="text-4xl font-bold">Discover & Book Sports Facilities with Ease</h2> */}
@@ -103,15 +96,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        </RootLayout>
-
-        /* Footer
-        <footer className="p-4 bg-gray-800 text-white text-center">
-          <p>&copy; 2024 Play Bookings LLC. All rights reserved.</p>
-        </footer> */
-
-      /* </div>
-    </main> */
+      </RootLayout>
   );
 }
