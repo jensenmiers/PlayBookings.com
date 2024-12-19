@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 export default function Home() {
 
   // state to hold the email input variable
+  // how do i make sure this supabase is accesible on my hosted environment?
   const [email, setEmail] = useState("");
 
   // event handler for input change
