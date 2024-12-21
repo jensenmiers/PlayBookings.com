@@ -18,8 +18,7 @@ export default async function handler(req, res) {
                 .from('subscribers')
                 .insert([
                     {
-                        // userid: null,
-                        // created_at: new Date().toISOString(),
+                        // what time stamp/time zone does Supabase create here?
                         email: email
                     }
                 ])
