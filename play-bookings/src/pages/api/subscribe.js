@@ -18,7 +18,6 @@ export default async function handler(req, res) {
                 .from('subscribers')
                 .insert([
                     {
-                        // what time stamp/time zone does Supabase create here?
                         email: email
                     }
                 ])
