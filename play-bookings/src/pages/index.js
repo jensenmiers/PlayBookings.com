@@ -32,7 +32,7 @@ export default function Home() {
       const result = await response.json();
 
       if (response.ok) {
-        toast.success("Success! 🎉 Thank you for your interest. We'll be in touch soon!", {
+        toast.success("Success! 🎉 Thank you for your interest. We'll be in touch soon at " + email + "!", {
           className: "bg-green-50 border-green-200",
         });
         setEmail('');
@@ -71,6 +71,7 @@ export default function Home() {
             <button
               className="px-4 sm:px-6 py-2 bg-yellow-500 text-black font-semibold rounded text-sm sm:text-base whitespace-nowrap"
               onClick={handleGetDemoClick} // add the event handler for submitting the buttton
+              disabled={!email}
             >
               Get Demo
             </button>
