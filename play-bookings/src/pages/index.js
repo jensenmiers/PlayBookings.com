@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 export default function Home() {
 
   const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   // event handler for input change
   const handleEmailChange = (event) => {
@@ -36,6 +37,7 @@ export default function Home() {
           className: "bg-green-50 border-green-200",
         });
         setEmail('');
+        setSubmitted(true);
       } else {
         toast.error(`Error: ${result.error}`);
       }
@@ -60,22 +62,24 @@ export default function Home() {
             Own a Gym, Field, or Sports Facility? Earn by Listing Your Space in Minutes.
           </p>
           {/* <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Get Early Access – Join Our List for Exclusive Updates!</button> */}
-          <div className="mt-6 flex flex-col sm:flex-row gap-2 w-full max-w-xs">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 border border-gray-300 rounded text-sm sm:text-base w-full text-black"
-              value={email} // binding the input value to the state
-              onChange={handleEmailChange} // add the event listener for text
-            />
-            <button
-              className="px-4 sm:px-6 py-2 bg-yellow-500 text-black font-semibold rounded text-sm sm:text-base whitespace-nowrap"
-              onClick={handleGetDemoClick} // add the event handler for submitting the buttton
-              disabled={!email}
-            >
-              Get Demo
-            </button>
-          </div>
+          <form onSubmit={handleGetDemoClick}>
+            <div className="mt-6 flex flex-col sm:flex-row gap-2 w-full max-w-xs">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="px-4 py-2 border border-gray-300 rounded text-sm sm:text-base w-full sm:w-96 text-black"
+                value={email} // binding the input value to the state
+                onChange={handleEmailChange} // add the event listener for text
+              />
+              <button
+                type="submit"
+                className={`px-4 sm:px-6 py-2 bg-green-500 text-black font-semibold rounded text-sm sm:text-base whitespace-nowrap transition-colors duration-150 ${submitted ? 'bg-green-500 text-white' : 'bg-yellow-500 text-black'}`}
+                disabled={!email || submitted}
+              >
+                {submitted ? 'Submitted 😎' : 'Get a Demo'}
+              </button>
+            </div>
+          </form>
         </section>
 
         {/* Features Section */}
