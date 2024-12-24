@@ -63,11 +63,12 @@ export default function Home() {
                 className="px-4 py-2 border border-gray-300 rounded text-sm sm:text-base w-full sm:w-96 text-black"
                 value={email} // binding the input value to the state
                 onChange={handleEmailChange} // add the event listener for text
+                required
               />
               <button
                 type="submit"
                 className={`px-4 sm:px-6 py-2 bg-green-500 text-black font-semibold rounded text-sm sm:text-base whitespace-nowrap transition-colors duration-150 ${submitted ? 'bg-green-500 text-white' : 'bg-yellow-500 text-black'}`}
-                disabled={!email || submitted}
+                disabled={submitted}
               >
                 {submitted ? 'Submitted 😎' : 'Get a Demo'}
               </button>
