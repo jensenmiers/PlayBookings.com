@@ -50,16 +50,16 @@ export default function Home() {
       <RootLayout>
         <section className="flex flex-col items-center justify-center min-h-[50vh] bg-blue-600 text-white px-4 sm:px-6 lg:px-8">
           {/* <h2 className="text-4xl font-bold">Discover & Book Sports Facilities with Ease</h2> */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
-            Discover & Book Sports Facilities with Ease.
+          <h2 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-center">
+            Book Sports Facilities with Ease.
           </h2>
           {/* <p className="mt-4 text-lg">Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.</p> */}
           <p className="mt-4 text-base sm:text-lg text-center">
-            Quickly Find and Book Indoor Gyms & Outdoor Fields Near You.
+            Quickly find and reserve indoor basketball courts near you.
           </p>
           {/* <p className="mt-4 text-lg">Own a Gym or Field? Earn by Listing Your Space in Minutes.</p> */}
           <p className="mt-4 text-base sm:text-lg text-center">
-            Own a Gym, Field, or Sports Facility? Earn by Listing Your Space in Minutes.
+            Own an under-utilized gym? Need to find a place to to play?
           </p>
           {/* <button className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded">Get Early Access – Join Our List for Exclusive Updates!</button> */}
           <form onSubmit={handleGetDemoClick}>
