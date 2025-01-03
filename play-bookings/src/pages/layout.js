@@ -9,7 +9,6 @@ export default function RootLayout({ children }) {
       <h1 className="text-lg font-bold">Play Bookings</h1>
       <nav>
         <a href="#features" className="mx-2">Features</a>
-        <a href="#locations" className="mx-2">Locations</a>
       </nav>
     </header>
     <main>{children}</main>
