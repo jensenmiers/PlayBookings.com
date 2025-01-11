@@ -10,7 +10,10 @@ useEffect(() => {
         // Simulated data
         const data = [
             { id: 1, name: 'Memorial Park court', city: 'Santa Monica'},
-            { id: 2, name: 'Crossroads Norton gym', city: 'Santa Monica'}
+            { id: 2, name: 'Crossroads Norton gym', city: 'Santa Monica'},
+            { id: 3, name: 'New Roads School', city: 'Santa Monica'},
+            { id: 4, name: 'Santa Monica High School', city: 'Santa Monica'},
+            { id: 5, name: 'Santa Monica College', city: 'Santa Monica'},
         ];
         setLocations(data);
     };
