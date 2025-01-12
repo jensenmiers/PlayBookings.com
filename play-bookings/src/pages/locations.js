@@ -15,6 +15,8 @@ useEffect(() => {
             { id: 4, name: 'Santa Monica High School', city: 'Santa Monica'},
             { id: 5, name: 'Santa Monica College', city: 'Santa Monica'},
             { id: 6, name: 'Barrington Gym', city: 'Brentwood'},
+            { id: 7, name: 'Bancroft Middle School Gym', city: 'Hollywood'},
+            { id: 8, name: 'Hollywood High School', city: 'Hollywood'}
         ];
         setLocations(data);
     };
